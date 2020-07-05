@@ -8,10 +8,9 @@ Before we start please go to https://pusher.com/ and create a new Account.Then C
 Now open the project in an idm of your choice, and set the shown app_id and key and secret into the:  
   
 - .env file:  
-  
-PUSHER_APP_ID=example id  
-PUSHER_APP_KEY=example key  
-PUSHER_APP_SECRET=example secret  
+    PUSHER_APP_ID=example id  
+    PUSHER_APP_KEY=example key  
+    PUSHER_APP_SECRET=example secret  
   
 - resources\assets\js\bootstrap.js:(line 52)  
     key: 'example key'  
@@ -30,7 +29,7 @@ You should edit in the .env file the following:
 # Before You Run it:
 In The Console type the following Command: php artisan migrate --seed, this will create your accounts and set the auto-accept option to 1.  
   
-- Users Accounts are as follows:
+- Users Accounts are as follows:  
 email: 0@gmail.com --> 10@gmail.com, all with password '123456'
   
 - Admin Acount:  
