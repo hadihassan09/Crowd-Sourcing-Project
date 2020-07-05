@@ -7,45 +7,45 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
 </p>
 
-## About Laravel
+Please Note The Long Delay in page loading is due to bad internet conection.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+==========================================================================================================================
+Please Before Starting Make Sure you are connected to the internet for pusher service to Work.
+--Before we start please go to https://pusher.com/ and create a new Account
+Then Create your new application and dont select its type region should be "AP2"
+After that you should be able to aquire your own App Keys
+Open the project in an idm of your choice, and set the shown app_id and key and secret into the:
+-.env file:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+PUSHER_APP_ID=example id
+PUSHER_APP_KEY=example key
+PUSHER_APP_SECRET=example secret
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+-resources\assets\js\bootstrap.js:(line 52)
+    key: 'example key',
 
-## Learning Laravel
+==========================================================================================================================
+--Setup Your Own SQL SERVICE of your own with the specified DATABASE for this application in the .env file.
+Please Note: the database should be created earlier and should be empty.
+You should edit in the .env file the following:
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+DB_HOST=YOUR HOST
+DB_PORT=YOUR PORT
+DB_DATABASE=DATABASE NAME
+DB_USERNAME=DATABASE USERNAME
+DB_PASSWORD=DATABASE PASSWORD
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+==========================================================================================================================
+--In The Console type the following Command: php artisan migrate --seed
+This will create your accounts and set the auto-accept option to 1.
+-Users Accounts are as follows:
+email: 0@gmail.com --> 10@gmail.com
+all with password '123456'
+-Admin Acount:
+email: admin@gmail.com
+passowrd: '123456'
+==========================================================================================================================
+--After The Migrations are done, Please type in php artisan serve and procced to 'http://127.0.0.1:8000' to start the workshop.
+==========================================================================================================================
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
-
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
